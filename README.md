@@ -63,15 +63,9 @@ ae370-landing-gear-project/
 │
 ├── report/
 │   ├── AE370_Project_Report.pdf      # Final report
-│   ├── AE370_Project_Report.tex      # LaTeX source (optional)
+│   ├── AE370_Project_Report.tex      # LaTeX source 
 │   └── figures/                      # Exported simulation figures
 │
-├── code/
-│   └── rk4_solver.py                 # RK4 integrator (optional modular form)
-│   └── force_analysis.py             # Normal force calculations
-│
-├── data/
-│   └── ground_profile.npy            # Generated synthetic ground data (optional)
 │
 └── README.md                         # You're here!
 ```
