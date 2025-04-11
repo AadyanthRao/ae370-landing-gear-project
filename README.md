@@ -1,12 +1,11 @@
 # AE370 Group Project: Simulation of Aircraft Landing Gear Dynamics
 
 This repository contains all code, figures, and documentation related to our AE370 Spring 2025 group project. We modeled and simulated the vertical dynamics of an aircraft landing gear system using a coupled mass-spring-damper formulation, subject to realistic ground excitations. The primary goal was to evaluate how system parameters — particularly damping — affect impact forces during landing and the smoothness of post-touchdown motion.
-
 ---
 
 ## ✈️ Project Objective
 
-To explore how damping and stiffness influence the touchdown behavior of a simplified aircraft landing gear, using a numerical simulation of a single-degree-of-freedom mass-spring-damper system driven by a moving ground profile $z_g(t)$.
+To explore how damping and stiffness influence the touchdown behavior of a simplified aircraft landing gear, using a numerical simulation of a single-degree-of-freedom mass-spring-damper system driven by a moving ground profile *z<sub>g</sub>(t)*.
 
 We focused on two engineering questions:
 
@@ -19,37 +18,33 @@ We focused on two engineering questions:
 
 We modeled the system as a damped oscillator with base excitation:
 
-- $m$: Effective aircraft mass supported by the gear  
-- $k$: Spring stiffness  
-- $c$: Damping coefficient  
-- $z(t)$: Vertical displacement of the aircraft  
-- $z_g(t)$: Terrain input (ground profile)  
-- $N(t)$: Normal force transmitted to the airframe  
+- *m*: Effective aircraft mass supported by the gear  
+- *k*: Spring stiffness  
+- *c*: Damping coefficient  
+- *z(t)*: Vertical displacement of the aircraft  
+- *z<sub>g</sub>(t)*: Terrain input (ground profile)  
+- *N(t)*: Normal force transmitted to the airframe  
 
-Equation of motion:  
-$$
-m\ddot{z} = -k(z - z_g) - c(\dot{z} - \dot{z}_g)
-$$
+**Equation of motion:**  
+* m·z″ = –k·(z – z<sub>g</sub>) – c·(ẋ – ż<sub>g</sub>) *
 
-Normal force formulation:  
-$$
-N(t) = mg - k(z - z_g) - c\left[(\dot{z} - \dot{z}_g) - (\dot{z}(0) - \dot{z}_g(0))\right]
-$$
+**Normal force formulation:**  
+* N(t) = m·g – k·(z – z<sub>g</sub>) – c·[(ẋ – ż<sub>g</sub>) – (ẋ₀ – ż<sub>g₀</sub>)] *
 
 ---
 
 ## 📈 Key Results
 
-- Verified **4th-order convergence** of our RK4 integrator.  
-- Identified optimal damping range for minimizing both peak impact forces and settling time.  
-- Demonstrated sensitivity of $N(t)$ to terrain features and system parameters.  
-- Showed how relative velocity correction eliminates artificial initial damping spikes.  
+- Verified **4th-order convergence** of our RK4 integrator  
+- Identified optimal damping range for minimizing both peak impact forces and settling time  
+- Demonstrated sensitivity of *N(t)* to terrain features and system parameters  
+- Showed how relative velocity correction eliminates artificial initial damping spikes  
 
-Our simulations included:
+**Our simulations included:**
 
-- Synthetic terrain excitation composed of randomized smooth sine waves.  
-- Time-domain plots of displacement $z(t)$, ground profile $z_g(t)$, and normal force $N(t)$.  
-- Parameter sweeps across different damping values with comparative analysis.
+- Synthetic terrain excitation composed of randomized smooth sine waves  
+- Time-domain plots of displacement *z(t)*, ground profile *z<sub>g</sub>(t)*, and normal force *N(t)*  
+- Parameter sweeps across different damping values with comparative analysis
 
 ---
 
