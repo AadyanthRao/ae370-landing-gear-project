@@ -98,8 +98,7 @@ Just open the notebook in Colab — no setup required.
 We designed this repository to ensure full reproducibility:
 
 - All figures and simulations are generated from `AE370_Simulation.ipynb`.  
-- Code is well-commented and modular.  
-- Ground excitation is seeded for deterministic behavior.  
+- Code is well-commented and divided into sections.
 - Normal force computations match theoretical equations from the report.
 
 ---
